@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.fondoImagen{
+    background-image: url('./media/FotoMascotas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100%;
+   
+    
+}
+
+
+.tabla {
+    width: 100%;
+    margin: 10px;
+    overflow-y: scroll;
+    font-family: monospace;
+  }
+  
+  .tabla td,
+  .tabla th {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .tabla th {
+    background-color: #f87171;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-family: monospace;
+  }
+  
+  .tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tabla tr:hover {
+    background-color: #ddd;
+  }
+  
