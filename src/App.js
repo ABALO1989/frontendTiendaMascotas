@@ -8,6 +8,7 @@ import Ventas from './pages/Ventas';
 import Login from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles.css'
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
 
@@ -15,6 +16,13 @@ import './styles.css'
 function App() {
   return (
     <div className="App">
+
+<Auth0Provider
+      //domain='misiontic-concesionario.us.auth0.com'
+      //clientId='WsdhjjQzDLIZEHA6ouuxXGxFONFGAQ4g'
+      redirectUri='https://agile-plains-84571.herokuapp.com/'
+      //audience='api-autenticacion-concesionario-mintic'
+    />
      <Router>
         <Switch>
           <Route path={['/usuarios', '/productos', '/ventas']}> {/*comentario: agregar separado por comas, las rutas que llevan este layout, son todas exepto el login */}

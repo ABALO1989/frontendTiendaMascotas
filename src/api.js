@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 
-const baseURL = "http://localhost:4000/api"
-//const baseURL = 'https://enigmatic-shelf-42481.herokuapp.com';
+//const baseURL = "http://localhost:4000/api"
+const baseURL = 'https://aqueous-reef-57891.herokuapp.com/';
 
 //CRUD PARA PRODUCTOS
 export const obtenerProductos = async (successCallback, errorCallback) => {

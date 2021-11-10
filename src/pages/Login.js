@@ -5,7 +5,7 @@ const Login = () => {
 
     function responseGoogle(response){
         if(response && response.tokenId ){
-            fetch('http://localhost:4000/login', {
+            fetch('https://aqueous-reef-57891.herokuapp.com/', {
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
