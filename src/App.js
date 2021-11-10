@@ -34,7 +34,7 @@ function App() {
           </Route>
           <Route path={['/']}>
             <LayoutInicial>
-              <Route path='/login'>
+              <Route path='/'>
                 <Login />
               </Route>
             </LayoutInicial>
