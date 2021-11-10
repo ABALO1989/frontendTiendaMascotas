@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //const baseURL = "http://localhost:4000/api"
-const baseURL = 'https://aqueous-reef-57891.herokuapp.com/';
+const baseURL = 'https://aqueous-reef-57891.herokuapp.com';
 
 //CRUD PARA PRODUCTOS
 export const obtenerProductos = async (successCallback, errorCallback) => {

@@ -18,10 +18,9 @@ function App() {
     <div className="App">
 
 <Auth0Provider
-      //domain='misiontic-concesionario.us.auth0.com'
-      //clientId='WsdhjjQzDLIZEHA6ouuxXGxFONFGAQ4g'
+     
       redirectUri='https://agile-plains-84571.herokuapp.com/'
-      //audience='api-autenticacion-concesionario-mintic'
+      
     />
      <Router>
         <Switch>
