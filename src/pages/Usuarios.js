@@ -18,7 +18,7 @@ function Usuarios() {
         const tokenStorage = localStorage.getItem('token');
         if (tokenStorage && loggedUser.rol === "Administrador") {
 
-            fetch('http://localhost:4000/usuarios', {
+            fetch('https://aqueous-reef-57891.herokuapp.com/usuarios', {
                 headers: {
                     'Content-Type': 'application/json',
                     token: tokenStorage
@@ -42,7 +42,7 @@ function Usuarios() {
         // Llamar al servidor
         const tokenStorage = localStorage.getItem('token');
         const rol = e.target.value;
-        fetch('http://localhost:4000/actualizarUsuario', {
+        fetch('https://aqueous-reef-57891.herokuapp.com/actualizarUsuario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -63,17 +63,20 @@ function Usuarios() {
     }
 
     return (
-        <div>
-              <div>
+    <div className='flex h-full w-full flex-col items-center justify-start p-10 '>
+    <div className='flex flex-col w-full'>
+
+      <div className='flex flex-col'>
             {!token && <Redirect to='/Login' />}
-            <h1>Listar Usuarios</h1>
-            <table>
+            <h2 className='text-2xl text-center font-mono font-bold text-yellow-900'> LISTAR USUARIOS</h2>
+            <div className='hidden md:flex w-full'>
+            <table className='tabla'>
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Rol</th>
-                        <th>Accion</th>
+                        <th>Actualizar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -95,9 +98,13 @@ function Usuarios() {
                     }
                 </tbody>
             </table>
+            </div>
         </div>
         <ToastContainer position='bottom-center' autoClose={3000} />
         </div>
+        </div>
+        
+
     )
 }
 

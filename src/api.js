@@ -10,7 +10,7 @@ const baseURL = 'https://aqueous-reef-57891.herokuapp.com/';
 export const obtenerProductos = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
-    url: `${baseURL}/productos/`,
+    url: `${baseURL}/api/productos/`,
   
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
@@ -20,7 +20,7 @@ export const obtenerProductos = async (successCallback, errorCallback) => {
 export const crearProducto = async (data, successCallback, errorCallback) => {
   const options = {
     method: 'POST',
-    url: `${baseURL}/productos/`,
+    url: `${baseURL}/api/productos/`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -30,7 +30,7 @@ export const crearProducto = async (data, successCallback, errorCallback) => {
 export const editarProducto= async (id, data, successCallback, errorCallback) => {
   const options = {
     method: 'PUT',
-    url: `${baseURL}/productos/${id}/`,
+    url: `${baseURL}/api/productos/${id}/`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -40,7 +40,7 @@ export const editarProducto= async (id, data, successCallback, errorCallback) =>
 export const eliminarProducto= async (id, successCallback, errorCallback) => {
   const options = {
     method: 'DELETE',
-    url: `${baseURL}/productos/${id}/`,
+    url: `${baseURL}/api/productos/${id}/`,
     headers: { 'Content-Type': 'application/json' },
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
@@ -51,7 +51,7 @@ export const eliminarProducto= async (id, successCallback, errorCallback) => {
 export const obtenerVentas = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
-    url: `${baseURL}/ventas/`,
+    url: `${baseURL}/api/ventas/`,
   
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
@@ -61,7 +61,7 @@ export const obtenerVentas = async (successCallback, errorCallback) => {
 export const crearVenta = async (data, successCallback, errorCallback) => {
   const options = {
     method: 'POST',
-    url: `${baseURL}/ventas/`,
+    url: `${baseURL}/api/ventas/`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -72,7 +72,7 @@ export const crearVenta = async (data, successCallback, errorCallback) => {
 export const editarVenta= async (id, data, successCallback, errorCallback) => {
   const options = {
     method: 'PUT',
-    url: `${baseURL}/ventas/${id}/`,
+    url: `${baseURL}/api/ventas/${id}/`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -82,7 +82,7 @@ export const editarVenta= async (id, data, successCallback, errorCallback) => {
 export const eliminarVenta= async (id, successCallback, errorCallback) => {
   const options = {
     method: 'DELETE',
-    url: `${baseURL}/ventas/${id}/`,
+    url: `${baseURL}/api/ventas/${id}/`,
     headers: { 'Content-Type': 'application/json' },
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
@@ -94,7 +94,7 @@ export const eliminarVenta= async (id, successCallback, errorCallback) => {
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
-    url: `${baseURL}/usuarios/`,
+    url: `${baseURL}/usuarios/self`,
     headers: {
       //Authorization: getToken(),
     },
