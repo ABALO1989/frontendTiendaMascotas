@@ -1,5 +1,6 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login';
+import { ToastContainer, toast } from 'react-toastify'
 
 const Login = () => {
 
@@ -22,6 +23,7 @@ const Login = () => {
                 localStorage.setItem('token', response.tokenId)
                 localStorage.setItem('usuario', JSON.stringify(respuestaServidor.usuario))
                 window.location.href ='/usuarios'
+               
             })
             
 
@@ -42,6 +44,7 @@ const Login = () => {
                
             />,
             </div>
+            <ToastContainer position='bottom-center' autoClose={3000} />
         </div>
     )
 }

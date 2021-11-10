@@ -31,6 +31,7 @@ function Usuarios() {
                 });
         } else {
             alert('Usted no esta autorizado');
+            toast.success('Venta modificada con éxito');
             setToken(false);
         }
     }, []);
