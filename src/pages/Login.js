@@ -34,7 +34,7 @@ const Login = () => {
     
     return (
         <div className='fondoImagen'>
-            <div className='block pt-4'>
+            <div className='block pt-10 px-96'>
             <GoogleLogin
                 clientId="1013222702859-0eg3qo5hvs6s2cl5347rld1otne9tsia.apps.googleusercontent.com"
                 buttonText="Iniciar Sesión"
