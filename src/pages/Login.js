@@ -44,7 +44,7 @@ const Login = () => {
                
             />,
             </div>
-            <ToastContainer position='bottom-center' autoClose={3000} />
+           
         </div>
     )
 }

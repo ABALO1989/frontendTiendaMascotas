@@ -177,7 +177,6 @@ const FilaVenta = ({ venta, setEjecutarConsulta }) => {
         _id: venta._id,
         fechaVenta: venta.fechaVenta,
         valorTotal: venta.valorTotal,
-        IDproducto: venta.IDproducto,
         IDcliente: venta.IDcliente,
         nombreCliente: venta.nombreCliente,
         vendedor: venta.vendedor,
@@ -190,7 +189,6 @@ const FilaVenta = ({ venta, setEjecutarConsulta }) => {
             venta._id,
             {
                 valorTotal: infoNuevaVenta.valorTotal,
-                IDproducto: infoNuevaVenta.IDproducto,
                 fechaVenta: infoNuevaVenta.fechaVenta,
                 IDcliente: infoNuevaVenta.IDcliente,
                 nombreCliente: infoNuevaVenta.nombreCliente,
@@ -244,16 +242,7 @@ const FilaVenta = ({ venta, setEjecutarConsulta }) => {
                         />
                     </td>
                     
-                    <td>
-                        <input
-                            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-                            type='text'
-                            value={infoNuevaVenta.IDproducto}
-                            onChange={(e) =>
-                                setNuevaVenta({ ...infoNuevaVenta, IDproducto: e.target.value })
-                            }
-                        />
-                    </td>
+                 
                     
                     <td>
                         <input
