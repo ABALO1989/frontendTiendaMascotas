@@ -79,7 +79,8 @@ const NuevaVenta = () => {
    
 
     await crearVenta({
-      vendedor: vendedores.filter((v) => v._id === nuevaVenta.vendedor)[0],
+     //vendedor: vendedores.filter((v) => v._id === nuevaVenta.vendedor)[0],
+      vendedor: vendedores,
       cantidad: nuevaVenta.valorTotal,
       productos: listaProductos,
       IDcliente: nuevaVenta.IDcliente,
